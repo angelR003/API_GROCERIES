@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Abarrotes TI</title>
+</head>
+<body>
+
+    <h1>Editar Producto</h1>
+    <a href="index.ejs">Regresar</a>
+    <form action="<% product.barcode%>" method="post">
+        <input type="text" name="barcode"  placeholder="Ingresa el codigo de barras" value="<%= product.barcode%>">
+        <input type="text" name="description" placeholder="Descripcion" value="<%= product.description%>">
+        <input type="text" name="brand" placeholder="Marca" value="<%= product.brand%>">
+        <input type="number" name="price"placeholder="El precio" value="<%= product.price%>">
+        <input type="number" name="cost" placeholder="Precio de venta" value="<%= product.cost%>">
+        <input type="number" name="stock" placeholder="Existencias" value="<%= product.stock%>">
+        <input type="Date" name="expiredDate" placeholder="Caducidad" value="<%= product.expiredDate%>">
+        <label for="flip-2">Status</label>
+        <select name="status" id="status" data-role="slider" data-role="slider">
+                    <option  value="0"<%= product.status=0?"selected":""%>>No</option>
+                    <option value="1"<%= product.status=1?"selected":""%>>Si</option>
+        </select>
+        <button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submit-2" onclick="alert('producto actualizado con exito')">Guardar</button>
+    </form>
+    
+</body>
+</html>

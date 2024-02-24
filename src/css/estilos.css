@@ -1,0 +1,85 @@
+/* Estilos mejorados para la página */
+
+/* Establecer color de fondo y espaciado */
+.ui-page {
+    background-color: #f9f9f9;
+    padding-top: 40px; /* Para dejar espacio para el header */
+    padding-bottom: 40px; /* Para dejar espacio para el footer */
+}
+
+/* Estilos para las pestañas */
+.ui-navbar {
+    background-color: #333;
+}
+
+.ui-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.ui-navbar li {
+    display: inline-block;
+}
+
+.ui-navbar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.ui-navbar a:hover {
+    background-color: #555;
+}
+
+.ui-navbar a.ui-btn-active {
+    background-color: #555;
+}
+
+/* Estilos para las páginas individuales */
+.pagina {
+    text-align: center;
+    padding: 20px;
+}
+
+.pagina h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.pagina p {
+    color: #666;
+}
+
+/* Estilos para el banner */
+.banner {
+    margin-top: 20px;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para el carrusel */
+.carrusel {
+    display: flex;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.carrusel div {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.carrusel img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pro {
+    max-width: 500px; /* Establece el ancho máximo de las imágenes */
+    max-height: 460px; /* Mantiene la proporción original de la imagen */
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="background-color: gray;">Tienda xbox</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        #inicio {
+            background-color: #77bb44;
+        }
+
+        #productos {
+            background-color: #77bb44;
+        }
+
+        
+        #consolas {
+            background-color: #77bb44;
+        }
+    </style>
+</head>
+<body>
+
+<div data-role="page" id="inicio">
+
+    <div data-role="header" data-position="fixed">
+        <h1>Tienda Xbox</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#inicio" class="ui-btn-active" data-transition="slide" style="background-color: forestgreen;  color: black;">Inicio</a></li>
+                <li><a href="#productos" data-transition="slide" style="background-color: forestgreen;  color: black;">Productos</a></li>
+                <li><a href="#consolas" data-transition="slide" style="background-color: forestgreen;  color: black;">Consolas</a></li>
+                <li><a href="#contacto" data-transition="slide" style="background-color: forestgreen;  color: black;">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div role="main" class="ui-content">
+        <h2 style="text-align: center;">Bienvenido a la tienda oficial de Xbox</h2>
+        <p style="text-align: center;">¡Descubre nuestras ofertas exclusivas!</p>
+    
+
+        <div class="banner" style="text-align: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Xbox_logo_%282019%29.svg/2560px-Xbox_logo_%282019%29.svg.png" style="width: 300px; height: 260; margin: 10px auto; align-content: center;">
+        </div>
+        <div id="prod" class="pagina">
+            
+            <div class="carrusel">
+                <img src="https://assets.xboxservices.com/assets/fb/d2/fbd2cb56-5c25-414d-9f46-e6a164cdf5be.png?n=XBX_A-BuyBoxBGImage01-D.png" style="width: 300px; height: 260; align-content: center;">
+                <img src="https://tienda.monteprovidencia.com.mx/cdn/shop/products/XboxsAD_580x.png?v=1613457271" style="width: 300px; height: 260; align-content: center;">
+                <h2 style="text-align: center;">Nuestros Productos</h2>
+                <img src="https://acdn.mitiendanube.com/stores/001/568/276/products/foto-producto-11-d709a0dc0b736a1aa916636580478724-1024-1024.png" style="width: 300px; height: 260;">
+                <img src="https://www.incentivosblackhawk.com.mx/wp-content/uploads/2021/10/xbox-300.png" style="width: 300px; height: 260;">
+            </div>
+        </div>
+
+        <div id="marcas" class="pagina">
+            <h2>Nuestras Marcas</h2>
+            <p>¡Trabajamos con las mejores marcas del mercado!</p>
+        </div>
+
+       
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>&copy; Xbox</h4>
+    </div>
+
+</div>
+
+    <div data-role="page" id="productos">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Tienda Xbox</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio" class="ui-btn-active" data-transition="slide" style="background-color: forestgreen;">Inicio</a></li>
+                    <li><a href="#productos" data-transition="slide" style="background-color: forestgreen;">Productos</a></li>
+                    <li><a href="#consolas" data-transition="slide" style="background-color: forestgreen;">Consolas</a></li>
+                    <li><a href="#contacto" data-transition="slide" style="background-color: forestgreen;">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333; text-align: justify;">
+            Sumérgete en el emocionante mundo de <span style="font-weight: bold; color: #0078d4;">Xbox</span>, donde la diversión y la aventura se 
+            encuentran en cada esquina. Nuestra tienda ofrece una amplia selección de los mejores y más exclusivos productos 
+            de <span style="font-style: italic;">Xbox</span>, diseñados para satisfacer todas tus necesidades de entretenimiento. Desde emocionantes 
+            videojuegos hasta elegantes accesorios, estamos aquí para llevarte a una experiencia de juego inigualable.
+        </p>
+        
+
+        <div data-role="content">
+            <form action="/api/products" method="post">
+            <input type="text" name="barcode" placeholder="Ingresa el codigo de barras">
+            <input type="text" name="description" placeholder="Descripcion">
+            <input type="text" name="brand" placeholder="Marca">
+            <input type="number" name="price"placeholder="El precio">
+            <input type="number" name="cost" placeholder="Precio de venta">
+            <input type="number" name="stock" placeholder="Existencias">
+            <input type="Date" name="expiredDate" placeholder="Caducidad">
+            <label for="flip-2">Status</label>
+            <select name="status" id="status" data-role="slider" data-mini="true">
+                    <option value="0">No</option>
+                    <option value="1">Si</option>
+            </select>
+            <button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submit-2" onclick="alert('producto guardado con exito')">Guardar</button>
+            
+
+            </form>
+
+              </div>
+        </div>
+
+    <div data-role="page" id="consolas"> 
+        <div data-role="header" data-position="fixed">
+            <h1>Tienda Xbox</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio" class="ui-btn-active" data-transition="slide" style="background-color: forestgreen;">Inicio</a></li>
+                    <li><a href="#productos" data-transition="slide" style="background-color: forestgreen;">Productos</a></li>
+                    <li><a href="#consolas" data-transition="slide" style="background-color: forestgreen;">Consolas</a></li>
+                    <li><a href="#contacto" data-transition="slide" style="background-color: forestgreen;">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+            <h1 style="text-align: center;">Consolas</h1>
+            <p>¡Descubre nuestras consolas de última generación!</p>
+            <div class="carrusel">
+                <img src="https://assets.xboxservices.com/assets/ee/9c/ee9cede5-e48e-4e35-9ee3-151881237e6f.png?n=XSX_Image-1084_XAA-2021_1090x610_02.png" style="width: 500px; height: 460;">
+                <img src="https://www.abasteo.mx/out/pictures/master/category/icon/xbox-serie-s-2.png" style="width: 500px; height: 460;">
+
+                <h1 style="text-align: center;" >Revive los clasicos!</h1>
+
+
+
+                <img src="https://www.lifewire.com/thmb/MpFsNgQjqwO0vevNZTeUpkoprcg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/xbox360e-5a3192204e46ba00369e7d89.png" style="width: 500px; height: 460;">
+                <img src="https://shop.mattel.com.au/cdn/shop/files/HWW15_3D_FINAL_S24_ATF02_700x.png?v=1700523869" style="width: 500px; height: 460;">
+            </div>
+            <form>
+                    <input data-type="search" id="searchForCollapsibleSetChildren">
+            </form>
+            <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true"id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
+                <% products.forEach((product) =>{%>
+                    <div data-role="collapsible" data-filtertext="<%= product.description %>">
+                        <h1><%= product.description %></h1>
+                        <ul data-role="listview" data-inset="false">
+                            <li>Codigo de barras: <%= product.barcode %></li>
+                            <li>Descripcion: <%= product.description %></li>
+                            <li>Marca: <%= product.brand %></li>
+                            <li>Precio de compra: <%= product.price %></li>
+                            <li>Precio de venta: <%= product.cost %></li>
+                            <li>Existencias: <%= product.stock %></li>
+                            <li>Caducidad: <%= product.expiredDate %></li>
+                            <li>Status: <%= product.status %></li>
+
+
+                            <a class="ui-btn" href="/api/products/<%=product.barcode%>" >Editar</a>
+
+                            <form action="/api/products/deleteProduct/<%=product.barcode%>" method="post">
+                                <button type="submit">Eliminar</button>
+                            </form>
+                        </ul>
+                    </div>
+                <%}) %>
+            </div>
+
+
+
+
+
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>&copy; Xbox</h4>
+        </div>
+       
+</body>
+</html>
+
